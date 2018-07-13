@@ -2,10 +2,9 @@ const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors')
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-
+require('dotenv').config()
 const app = express();
 
 const mongoose = require('mongoose');
