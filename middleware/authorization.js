@@ -12,12 +12,12 @@ module.exports = {
         query.findOne(function (err, user) {
           if (err) {
             res.status(500)
-                .json({message : "internal server error"})
+                 .json({status : "failed", message : "internal server error"})
           } else {
             if (user == null) {
               //no user found with above email , send response user not authorized
               res.status(403)
-              .json ({message : "user not authorized"})
+              .json ({status : "failed", message : "user not authorized"})
             } else {
               //user authenticated
               next()
@@ -26,11 +26,11 @@ module.exports = {
         })
       } catch(err) {
         res.status(400)
-          .json ({message : "token invalid"})
+        .json ({status : "failed", message : "token invalid"})
       }
     } else {
       res.status(401)
-      .json ({message : "token not found"})
+      .json ({status : "failed", message : "token not found"})
     }
   }
 }
