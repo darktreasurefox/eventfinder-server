@@ -2,10 +2,9 @@ const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors')
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-
+require('dotenv').config()
 const app = express();
 
 const mongoose = require('mongoose');
@@ -22,6 +21,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/events', require('./routes/events'))
 app.use('/tweets', require('./routes/twitter'))
+app.use('/darksky', require('./routes/darksky'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
