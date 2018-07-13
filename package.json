@@ -14,12 +14,13 @@
     "eventful-node": "^1.1.1",
     "express": "~4.16.0",
     "fb": "^2.0.0",
+    "forecast.io": "0.0.11",
     "http-errors": "~1.6.2",
     "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
     "mongodb": "^3.1.1",
     "mongoose": "^5.2.3",
     "morgan": "~1.9.0",
-    "oauth": "^0.9.15",
-    "forecast.io": "0.0.11"
+    "oauth": "^0.9.15"
   }
 }
