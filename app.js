@@ -20,8 +20,8 @@ app.use(cors())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/events', require('./routes/events'))
+app.use('/tweets', require('./routes/twitter'))
 app.use('/darksky', require('./routes/darksky'))
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
